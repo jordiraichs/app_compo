@@ -2,7 +2,7 @@
 
 import { StyleSheet } from 'react-native';
 
-const Styles = StyleSheet.create({
+const Estils = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -26,9 +26,9 @@ const Styles = StyleSheet.create({
   text1: {
     color: 'blue',
     fontFamily: 'Arial',
-    fontSize: 14
+    fontSize: 25
   },
 
 });
 
-export default Styles;
+export default Estils;

@@ -1,5 +1,7 @@
 import {View, Text } from 'react-native';
 
+import Estils from '../estils/Estils';
+
 // **** Component Funcions ****
 // pas de parametres entre funcions
 
@@ -17,9 +19,8 @@ const Funcions = () =>{
     const colors = ['groc','verd'];
 
     return ( 
-            // mezcla de javascript
             <View>
-                <Text> {nom} </Text>
+                <Text style={Estils.text1}> {nom} </Text>
                 <Text> {funcio1()} </Text>
                 <Text> {funcio2(colors[0],colors[1])} </Text>
             </View>
