@@ -1,5 +1,6 @@
 import {View, Text } from 'react-native';
 
+// importem els estils
 import Estils from '../estils/Estils';
 
 // **** Component Funcions ****

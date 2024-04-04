@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 // funcions i propietats
 import Fun_props from './components/Fun_props';
 import Var_estat from './components/Var_estat';
+import VideoList from './components/VideoList';
 
 export default function App() {
 
@@ -11,11 +12,14 @@ export default function App() {
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
       
-      <Fun_props llenguatge="JavaScript" assignatura="Mòdul 8"/>
+      {/* 
+        <Fun_props llenguatge="JavaScript" assignatura="Mòdul 8"/>
+        <Var_estat />
+      */}
       
-      <Var_estat />
+        <VideoList />
       
-      <StatusBar style="auto" />
+        <StatusBar style="auto" />
     </View>
   );
 }

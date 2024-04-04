@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Button, Text, View} from 'react-native';
 
-// **** compo contador ***
+// **** component contador ***
 // Exemple de variables d'estat i funcions lambda
 
 const Comprovar =(valor)=>{
