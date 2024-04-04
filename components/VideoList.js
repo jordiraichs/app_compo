@@ -1,6 +1,11 @@
 import React from 'react';
 import { View, FlatList, Text } from 'react-native';
-import { Video } from 'expo-av'; // npx expo install expo-av
+
+/**
+ * https://docs.expo.dev/versions/latest/sdk/av/
+ * Instal·lació component: npx expo install expo-av
+ */
+import { ResizeMode, Video, VideoNaturalSize } from 'expo-av'; 
 
 import alan from '../assets/videos/Alan.mp4';
 
@@ -8,7 +13,7 @@ import alan from '../assets/videos/Alan.mp4';
 // Creem la llista amb els elements
 const videos = [
   { id: 1, title: 'Video 1', source: alan },
-  { id: 2, title: 'Video 2', source: alan },
+  { id: 2, title: 'Video 2', source: "https://res.cloudinary.com/demo/video/upload/c_scale,w_400/elephants.mp4"},
   { id: 3, title: 'Video 3', source: alan },
   { id: 4, title: 'Video 4', source: alan },
   { id: 5, title: 'Video 5', source: alan },
@@ -21,19 +26,24 @@ const videos = [
 // Component: VideoList
 const VideoList = () => {
 
-  // funció renderització , cridem al component Video
+  // ** funció renderització , cridem al component Video
   const renderVideoItem = ({ item }) => (
     <View>
+      
       <Text>{item.title}</Text>
-      <Video
+            
+      <Video 
+        // Props (propietats): style, source,... https://docs.expo.dev/versions/latest/sdk/video/#videostyle
+        style={{ alignContent:'center', width: 320, height: 200 }}
         source={item.source}
-        style={{ width: 800, height: 400 }}
         useNativeControls
+        resizeMode={ResizeMode.CONTAIN} // S'ajusta als límits dels components tot conservant la relació d'aspecte
       />
+
     </View>
   );
   
-  // retornem la FlatList : https://reactnative.dev/docs/flatlist 
+  // ** retornem la FlatList : https://reactnative.dev/docs/flatlist 
   return (
     <View style={{ flex: 1 }}>
       <FlatList
